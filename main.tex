@@ -1,5 +1,69 @@
-\documentclass{article}
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=1cm,right=1cm,top=3cm,bottom=3cm]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[export]{adjustbox}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{transparent}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref} \hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black,}
+\usepackage{xcolor,listings}
+\usepackage{textcomp}
+\lstset{upquote=true}
+
+\usepackage{amsmath} 
+
+
+% 1 : Logo ulb en fond
+\newcommand\BackgroundPic{%
+    \put(0,-47){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \vfill
+            \centering
+            {\transparent{0.09}\includegraphics[width=1.10 \textwidth]{logo_ulb.jpg}}%
+            \vfill
+        }
+    }
+}
+
 \begin{document}
-(Type your content here.)
+\AddToShipoutPicture*{\BackgroundPic}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{-1.5cm}
+\includegraphics[width=8cm]{ULB.jpg}
+\vspace{6cm}
+
+\par{\huge \textbf{Rapport Analyse}}\bigbreak
+\bigbreak
+\vspace{2cm}
+\par{\large [INFO-F309]}
+\vspace{2cm}
+
+\par \hrulefill \par
+\vspace{1cm}
+\bsc{Jacobs} Alexandre 
+\bsc{}
+\bsc{Engelman} David
+\bsc{}
+\bsc{Engelman} Benjamin
+\bsc{}
+\bsc{Bonaert} Gregory
+\bsc {Nogueria Cabaço} Pedro Filipe
+{\emph \\BA3 Informatique}
+\vspace{0.7cm}
+\par \hrulefill \par
+
+\vspace{2cm}
+\par Novembre 2017
+
+\end{center}
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+
 \end{document}
