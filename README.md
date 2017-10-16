@@ -1,4 +1,4 @@
 # AdminSys
 Projet INFO-F309: Administration de systèmes
 
-En attendant que je retrouve la commande pour lier overleaf à ce repo: [latex](https://www.overleaf.com/11636920fhhzbnhqydjz)
+[Lien utile](https://www.overleaf.com/help/230-how-do-i-push-a-new-project-to-overleaf-via-git#.WeT-VWi0OUl) pour savoir use overleaf avec github.
