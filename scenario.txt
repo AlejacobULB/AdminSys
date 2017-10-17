@@ -1,0 +1,13 @@
+Facebook fête sa deuxième année d’existence en 2006, devient de plus en plus populaire et
+commence à ne plus savoir comment stocker ses données. Leur architecture n’étant plus capable
+de gérer un volume de données gigantesque et grandissant chaque jour, ils nous engagent
+pour créer une solution qui perdurera et qui sera capable de gérer
+et stocker les millions de photos et vidéos partagées par des dizaines de millions d’utilisateurs.
+Les anciennes données devront être transférées vers la nouvelle architecture
+et la migration ne pourra pas engendrer de downtime. Le nouveau système devra effectuer
+des copies dans différents data centers afin de s’assurer qu’aucune donnée ne soit perdue
+et que le système résiste aux défaillances de disques durs ou aux pannes.
+
+Note: même si Facebook a eu 2 ans en 2006, nous allons utiliser toutes les technologies
+et outils qui existent aujourd’hui (2017) pour résoudre leur problème, pour pouvoir profiter
+de tous les outils qui ont été développés depuis. 
