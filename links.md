@@ -8,7 +8,7 @@ Liens utiles:
 - [Comparaison HDFS, GlusterFS, Ceph](https://blog.groupe-sii.com/comparaison-hdfs-glusterfs-ceph)
 - [Comparaison](https://indico.cern.ch/event/214784/contributions/1512447/attachments/340854/475673/storage_donvito_chep_2013.pdf)
 - [Best FS](https://www.reddit.com/r/sysadmin/comments/5uulqm/best_distributed_file_system_glusterfs_vs_ceph_vs/)
-
+- [Expliquation DFS + Comparaison] (https://hal.archives-ouvertes.fr/hal-00789086/document)
 
 
 **Ceph**
