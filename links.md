@@ -2,6 +2,9 @@ Liens utiles:
 
 > Syntaxe: \[le lien](url)
 
+**Comparaisons**
+
+- [Comparaison HDFS, GlusterFS, Ceph](https://blog.groupe-sii.com/comparaison-hdfs-glusterfs-ceph/)
 
 **Ceph**
 
