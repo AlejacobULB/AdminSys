@@ -6,7 +6,7 @@ Liens utiles:
 
 - [Performance](http://iopscience.iop.org/article/10.1088/1742-6596/513/4/042014/pdf)
 - [Comparaison HDFS, GlusterFS, Ceph](https://blog.groupe-sii.com/comparaison-hdfs-glusterfs-ceph)
-- [Facilité installation](https://indico.cern.ch/event/214784/contributions/1512447/attachments/340854/475673/storage_donvito_chep_2013.pdf)
+- [Comparaison](https://indico.cern.ch/event/214784/contributions/1512447/attachments/340854/475673/storage_donvito_chep_2013.pdf)
 
 **Ceph**
 
