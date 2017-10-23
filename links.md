@@ -9,10 +9,13 @@ Liens utiles:
 - [Comparaison](https://indico.cern.ch/event/214784/contributions/1512447/attachments/340854/475673/storage_donvito_chep_2013.pdf)
 - [Best FS](https://www.reddit.com/r/sysadmin/comments/5uulqm/best_distributed_file_system_glusterfs_vs_ceph_vs/)
 
+
+
 **Ceph**
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Ceph_(software))
 - [Mise en oeuvre](https://connect.ed-diamond.com/GNU-Linux-Magazine/GLMF-180/Mise-en-aeuvre-de-Ceph)
+- [Ceph FileSystem vs Object Storage vs Block Storage](http://ceph.com/ceph-storage/)
 
 **GlusterFS**
 - [Wikipedia](https://en.wikipedia.org/wiki/GlusterFS)
