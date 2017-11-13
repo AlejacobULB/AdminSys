@@ -14,7 +14,7 @@ echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | su
 echo "apt-update"
 sudo apt update
 echo "install ceph-deploy"
-sudo apt install ceph-deploy
+sudo apt install ceph-deploy -y
 
 # Create user
 echo "create user"
