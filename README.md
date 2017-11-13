@@ -13,11 +13,11 @@ Projet INFO-F309: Administration de systèmes
 
 ## Documentation officielle:
 
-Étape 1. [Pre-flight checklist](http://docs.ceph.com/docs/emperor/start/quick-start-preflight/)
+Étape 1. [Pre-flight checklist](http://docs.ceph.com/docs/master/start/quick-start-preflight/)
 
-Étape 2. [Storage Cluster Quick Start](http://docs.ceph.com/docs/emperor/start/quick-ceph-deploy/)
+Étape 2. [Storage Cluster Quick Start](http://docs.ceph.com/docs/master/start/quick-ceph-deploy/)
 
-Étape 3. [Object Storage Quick Start](http://docs.ceph.com/docs/emperor/start/quick-rgw/)
+Étape 3. [Object Storage Quick Start](http://docs.ceph.com/docs/master/start/quick-rgw/)
 
 
 ## Tutoriels d'autres personnes
