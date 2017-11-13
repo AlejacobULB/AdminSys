@@ -19,7 +19,7 @@ sudo apt install ceph-deploy -y
 # Create user
 echo "create user"
 sudo useradd -d /home/$CEPH_USERNAME -m $CEPH_USERNAME
-echo "$PASSWORD" | passwd "$CEPH_USERNAME" --stdin
+echo "$CEPH_USERNAME:$PASSWORD" | sudo /usr/sbin/chpasswd
 
 echo "Add sudo privileges to newly created user"
 # Add sudo privileges to newly created user
