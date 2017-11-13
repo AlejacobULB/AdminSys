@@ -9,14 +9,15 @@ echo "Setting up APT"
 sudo apt install apt-transport-https
 
 # Install ceph-deploy
-echo "install ceph-deploy"
 wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
 echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
+echo "apt-update"
 sudo apt update
+echo "install ceph-deploy"
 sudo apt install ceph-deploy
 
-echo "create user"
 # Create user
+echo "create user"
 sudo useradd -d /home/$CEPH_USERNAME -m $CEPH_USERNAME
 echo "$PASSWORD" | passwd "$CEPH_USERNAME" --stdin
 
