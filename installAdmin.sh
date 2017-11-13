@@ -3,21 +3,16 @@ SERVER_USERNAME=admin
 CEPH_USERNAME=cephUser
 PASSWORD=ceph
 
+# Connect to admin server
+ssh $SERVER_USERNAME@$SERVER
+
 # Install ceph-deploy
 wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
 echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
 sudo apt update
 sudo apt install ceph-deploy
 
-# Install NTP (to avoid clock skew)
-# sudo apt install ntp
-
-
-# Install SSH server
-sudo apt install openssh-server
-
 # Create user
-ssh $SERVER_USERNAME@$SERVER
 sudo useradd -d /home/$CEPH_USERNAME -m $CEPH_USERNAME
 echo "$PASSWORD" | passwd "$CEPH_USERNAME" --stdin
 
