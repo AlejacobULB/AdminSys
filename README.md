@@ -6,3 +6,17 @@ Projet INFO-F309: Administration de systèmes
 [Tableau de comparaison](https://docs.google.com/document/d/168RMYuq4Ep0hAeY92o6pK7WYBCf9zQ5wtZTn307ikt0/edit?usp=sharing)
 
 [Enonce](http://www.ulb.ac.be/di/algo/secollet/adminsys/projet.pdf)
+
+
+
+# Liens utiles pour la installation
+
+![Deploy Ceph and start using it: end to end tutorial](https://blog.zhaw.ch/icclab/deploy-ceph-and-start-using-it-end-to-end-tutorial-installation-part-13/)
+
+![Ubuntu 14.04 - Deploy a Ceph Cluster](http://blog.programster.org/ubuntu-14-04-deploy-a-ceph-cluster-part-1)
+
+![How to install a Ceph Storage Cluster on Ubuntu 16.04](https://www.howtoforge.com/tutorial/how-to-install-a-ceph-cluster-on-ubuntu-16-04/)
+
+![My adventures with Ceph Storage](https://www.virtualtothecore.com/en/adventures-ceph-storage-part-1-introduction/)
+
+![A Hands on guide to ceph](https://alanxelsys.com/2016/05/04/a-hands-on-guide-to-ceph/)
