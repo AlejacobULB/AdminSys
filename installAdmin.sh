@@ -5,23 +5,25 @@ PASSWORD=ceph
 
 # ssh -p 3022 $SERVER_USERNAME@127.0.0.1
 
-echo "Setting up APT"
+echo "\n ===>Setting up APT<=== \n"
 sudo apt install apt-transport-https
 
 # Install ceph-deploy
 wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
 echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
-echo "apt-update"
+
+echo "\n ===>apt-update<=== \n"
 sudo apt update
-echo "install ceph-deploy"
+
+echo "\n ===>Installing ceph-deploy<=== \n"
 sudo apt install ceph-deploy -y
 
 # Create user
-echo "create user"
+echo "\n ===>Creating Ceph user<=== \n"
 sudo useradd -d /home/$CEPH_USERNAME -m $CEPH_USERNAME
 echo "$CEPH_USERNAME:$PASSWORD" | sudo /usr/sbin/chpasswd
 
-echo "Add sudo privileges to newly created user"
+echo "\n ==>Adding sudo privileges to newly created user<=== \n"
 # Add sudo privileges to newly created user
 echo "$CEPH_USERNAME ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$CEPH_USERNAME
 sudo chmod 0440 /etc/sudoers.d/$CEPH_USERNAME
