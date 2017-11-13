@@ -4,7 +4,7 @@ CEPH_USERNAME=cephUser
 PASSWORD=ceph
 
 # Connect to admin server
-ssh $SERVER_USERNAME@$SERVER
+ssh -p 3022 $SERVER_USERNAME@$SERVER
 
 # Install ceph-deploy
 wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
