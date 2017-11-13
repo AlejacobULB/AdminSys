@@ -11,6 +11,17 @@ Projet INFO-F309: Administration de systèmes
 
 # Liens utiles pour la installation
 
+## Documentation officielle:
+
+Étape 1. [Pre-flight checklist](http://docs.ceph.com/docs/emperor/start/quick-start-preflight/)
+
+Étape 2. [Storage Cluster Quick Start](http://docs.ceph.com/docs/emperor/start/quick-ceph-deploy/)
+
+Étape 3. [Object Storage Quick Start](http://docs.ceph.com/docs/emperor/start/quick-rgw/)
+
+
+## Tutoriels d'autres personnes
+
 [Deploy Ceph and start using it: end to end tutorial](https://blog.zhaw.ch/icclab/deploy-ceph-and-start-using-it-end-to-end-tutorial-installation-part-13/)
 
 [Ubuntu 14.04 - Deploy a Ceph Cluster](http://blog.programster.org/ubuntu-14-04-deploy-a-ceph-cluster-part-1)
