@@ -1,3 +1,4 @@
+#! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
 # Install ceph-deploy and send ssh key to other nodes
 
@@ -19,7 +20,9 @@ sudo apt install ceph-deploy -y
 
 # Create SSH keys and copy them to the nodes
 echo "Create SSH keys and copy them to the nodes"
-cat /dev/zero | ssh-keygen -q -N ""
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+
+#Ces trois lignes pausent probleme, sinon tout marche
 ssh-copy-id $CEPH_USERNAME@node1
 ssh-copy-id $CEPH_USERNAME@node2
 ssh-copy-id $CEPH_USERNAME@node3
