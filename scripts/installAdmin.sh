@@ -15,6 +15,9 @@ echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | su
 echo $'\n ===>apt-update<=== \n'
 sudo apt update
 
+echo $'\n ===>installing sshpass<=== \n'
+sudo apt install sshpass
+
 echo $'\n ===>Installing ceph-deploy<=== \n'
 sudo apt install ceph-deploy -y
 
@@ -23,9 +26,9 @@ echo "Create SSH keys and copy them to the nodes"
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 #Ces trois lignes pausent probleme, sinon tout marche
-ssh-copy-id $CEPH_USERNAME@node1
-ssh-copy-id $CEPH_USERNAME@node2
-ssh-copy-id $CEPH_USERNAME@node3
+sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node1
+sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node2
+sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node3
 
 # Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can 
 # log in to Ceph nodes as the user you created without requiring you to specify --username {username} each 
