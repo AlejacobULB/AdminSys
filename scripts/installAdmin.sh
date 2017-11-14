@@ -25,7 +25,6 @@ sudo apt install ceph-deploy -y
 echo "Create SSH keys and copy them to the nodes"
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
-#Ces trois lignes pausent probleme, sinon tout marche
 sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node1
 sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node2
 sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node3
