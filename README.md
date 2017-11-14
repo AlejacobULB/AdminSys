@@ -41,3 +41,12 @@ Projet INFO-F309: Administration de systèmes
 4: node3 <br />
 
 Username/password sur toutes les machines : admin/admin
+
+## Scripts 
+installNodes.sh : Crée un user nommé "cephUser" avec comme password "ceph" sur tous les noeuds<br />
+runInstallNodes.sh : Se connecte en SSH à tous les noeuds pour executer installNodes.sh<br />
+<br />
+installAdmin.sh : Installe ceph-deploy sur l'admin-node
+runInstallAdmin.sh : Se connecte en SSH sur le admin-node et execute instalAdmin.sh
+
+
