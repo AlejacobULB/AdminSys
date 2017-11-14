@@ -34,12 +34,12 @@ Projet INFO-F309: Administration de systèmes
 
 ## Machines Virtuelles 
 
-4 Machines :
-1: admin-node 
-username : admin-node / passwod : admin 
-2: node1 
-username : admin-node1 / passwod : admin 
-3: node2 
-username : admin-node2 / passwod : admin 
-4: node3 
-username : admin-node3 / passwod : admin 
+4 Machines :<br />
+1: admin-node <br />
+username : admin-node / passwod : admin <br />
+2: node1 <br />
+username : admin-node1 / passwod : admin <br />
+3: node2 <br />
+username : admin-node2 / passwod : admin <br />
+4: node3 <br />
+username : admin-node3 / passwod : admin <br />
