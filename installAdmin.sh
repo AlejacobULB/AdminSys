@@ -1,9 +1,8 @@
-SERVER=$1
-SERVER_USERNAME=admin-node
-CEPH_USERNAME=cephUser
-PASSWORD=ceph
+# Run on AdminNode
+# Install ceph-deploy and send ssh key to other nodes
 
-# ssh -p 3022 $SERVER_USERNAME@127.0.0.1
+NUMBER_OF_NODES=3
+CEPH_USERNAME=CephUser
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
@@ -18,13 +17,26 @@ sudo apt update
 echo $'\n ===>Installing ceph-deploy<=== \n'
 sudo apt install ceph-deploy -y
 
-# Create user
-echo $'\n ===>Creating Ceph user<=== \n'
-sudo useradd -d /home/$CEPH_USERNAME -m $CEPH_USERNAME
-echo "$CEPH_USERNAME:$PASSWORD" | sudo /usr/sbin/chpasswd
+echo $'\n ===>Generating SSH key <=== \n'
+ssh-keygen
 
-echo $'\n ==>Adding sudo privileges to newly created user<=== \n'
-# Add sudo privileges to newly created user
-echo "$CEPH_USERNAME ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$CEPH_USERNAME
-sudo chmod 0440 /etc/sudoers.d/$CEPH_USERNAME
+echo $'\n ===>Copying the SSH key to each Ceph nodes<=== \n'
+
+for i in {1..$NUMBER_OF_NODES}
+do
+
+    ssh-copy-id CEPH_USERNAME@node.$i
+
+done
+
+echo "
+Host node1
+	Hostname node1
+	User CephUser
+Host node2
+	Hostname node2
+	User CephUser
+Host node3
+	Hostname node3
+	User CephUser" >> ~/.ssh/config
 
