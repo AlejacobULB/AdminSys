@@ -42,6 +42,8 @@ Projet INFO-F309: Administration de systèmes
 
 Username/password sur toutes les machines : admin/admin
 
+[Lien vers les fichiers .ova](https://drive.google.com/open?id=1d3xU7Si4vHFo3O0_gkWn83QQp0W8w9pT)
+
 ## Scripts 
 installNodes.sh : Crée un user nommé "cephUser" avec comme password "ceph" sur tous les noeuds<br />
 runInstallNodes.sh : Se connecte en SSH à tous les noeuds pour executer installNodes.sh<br />

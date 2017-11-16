@@ -29,9 +29,9 @@ sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node1
 sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node2
 sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node3
 
-# Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can 
-# log in to Ceph nodes as the user you created without requiring you to specify --username {username} each 
-# time you execute ceph-deploy. 
+# Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can
+# log in to Ceph nodes as the user you created without requiring you to specify --username {username} each
+# time you execute ceph-deploy.
 # This has the added benefit of streamlining ssh and scp usage
 echo "Modify the ~/.ssh/config file of your ceph-deploy admin node"
 cat >>~/.ssh/config <<EOL
