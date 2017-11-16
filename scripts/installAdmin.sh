@@ -3,7 +3,7 @@
 # Install ceph-deploy and send ssh key to other nodes
 
 NUMBER_OF_NODES=3
-CEPH_USERNAME=CephUser
+CEPH_USERNAME=cephUser
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
