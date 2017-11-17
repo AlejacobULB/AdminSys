@@ -4,4 +4,4 @@
 CEPH_USERNAME=cephUser
 ADMIN_PORT=3022
 
-cat createNodes.sh | ssh -p $ADMIN_PORT $CEPH_USERNAME@localhost
+cat createCluster.sh | ssh -p $ADMIN_PORT $CEPH_USERNAME@localhost
