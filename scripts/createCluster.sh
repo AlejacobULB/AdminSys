@@ -15,9 +15,6 @@ ceph-deploy mon create-initial
 #Copy the configuration file and admin key to your admin node and your Ceph Nodes
 ceph-deploy admin node1 node2 node3
 
-#Deploy a manager daemon
-ceph-deploy mgr create node1 node2 node3
-
 #DONE CREATE /DEV/VDB ON ALL NODES
 #Add OSD's on nodes
 ceph-deploy osd create node1:vdb node2:vdb node3:vdb
