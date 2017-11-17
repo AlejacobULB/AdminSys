@@ -61,7 +61,7 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
 *  Check l'état du cluster : 
     ```
     ceph -s
-`   ```
+    ```
 
 ### Pool
 *  Créer une pool :
