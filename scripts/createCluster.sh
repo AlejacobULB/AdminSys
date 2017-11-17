@@ -3,26 +3,28 @@
 mkdir -p my-cluster
 cd my-cluster
 
-#Add monitor on nodes
+# Add monitor on nodes
 ceph-deploy new node1 node2 node3
 
-#Install Ceph packages on nodes
+# Install Ceph packages on nodes
 ceph-deploy install node1 node2 node3
 
-#Deploy the initial monitor(s) and gather the keys (pas trop compris ce que ca fait)
+# Deploy the initial monitor(s) and gather the keys (pas trop compris ce que ca fait)
 ceph-deploy mon create-initial
 
-#Copy the configuration file and admin key to your admin node and your Ceph Nodes
+# Copy the configuration file and admin key to your admin node and your Ceph Nodes
 ceph-deploy admin node1 node2 node3
 
-#Deploy a manager daemon
-ceph-deploy mgr create node1 node2 node3
+# Deploy a manager daemon 
+# This step is only required for version 12+, but Debian has version 10, so this step is not needed
+# currently
+# ceph-deploy mgr create node1 node2 node3
 
-#DONE CREATE /DEV/VDB ON ALL NODES
-#Add OSD's on nodes
+# Before doing this step, ensure that there is a disk device for the OSD on /dev/sdb on each node
+# Add OSD's on nodes
 ceph-deploy osd create node1:vdb node2:vdb node3:vdb
 
-#Check the node's health
+# Check the node's health
 ssh node1 sudo ceph -s
 ssh node2 sudo ceph -s
 ssh node3 sudo ceph -s
