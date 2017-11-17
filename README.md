@@ -32,6 +32,8 @@ Projet INFO-F309: Administration de systèmes
 
 [A Hands on guide to ceph](https://alanxelsys.com/2016/05/04/a-hands-on-guide-to-ceph/)
 
+[PG calculator](http://ceph.com/pgcalc/)
+
 # Machines Virtuelles 
 
 4 Machines :<br />
