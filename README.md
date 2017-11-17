@@ -51,4 +51,6 @@ runInstallNodes.sh : Se connecte en SSH à tous les noeuds pour executer install
 installAdmin.sh : Installe ceph-deploy sur l'admin-node<br />
 runInstallAdmin.sh : Se connecte en SSH sur le admin-node et execute instalAdmin.sh<br />
 
+## Hardware recommendations
 
+From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/part-ii-networking-recommendations/)
