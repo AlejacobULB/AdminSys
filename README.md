@@ -68,6 +68,7 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     ```
     ceph osd pool create {pool-name} {pg-num} 
     ```
+    
 *  Supprimer une pool :
     ```
     ceph osd pool rm {poolname} 
