@@ -32,7 +32,7 @@ Projet INFO-F309: Administration de systèmes
 
 [A Hands on guide to ceph](https://alanxelsys.com/2016/05/04/a-hands-on-guide-to-ceph/)
 
-## Machines Virtuelles 
+# Machines Virtuelles 
 
 4 Machines :<br />
 1: admin-node <br />
@@ -44,26 +44,26 @@ Username/password sur toutes les machines : admin/admin
 
 [Lien vers les fichiers .ova](https://drive.google.com/open?id=1d3xU7Si4vHFo3O0_gkWn83QQp0W8w9pT)
 
-## Scripts 
+# Scripts 
 installNodes.sh : Crée un user nommé "cephUser" avec comme password "ceph" sur tous les noeuds<br />
 runInstallNodes.sh : Se connecte en SSH à tous les noeuds pour executer installNodes.sh<br />
 <br />
 installAdmin.sh : Installe ceph-deploy sur l'admin-node<br />
 runInstallAdmin.sh : Se connecte en SSH sur le admin-node et execute instalAdmin.sh<br />
 
-## Hardware recommendations
+# Hardware recommendations
 
 From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/part-ii-networking-recommendations/)
 
-## Commandes utiles
+# Commandes utiles
 
-### Générales
+## Générales
 *  Check l'état du cluster : 
     ```
     ceph -s
     ```
 
-### Pool
+## Pool
 *  Lister les pools :
     ```
     rados lspools
@@ -83,7 +83,7 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     rados -p {poolname} ls 
     ```
    
-### Objets
+## Objets
 *  Ajouter un objet dans une certaine pool : 
     ```
     rados put {object-name} {file-path} --pool={poolname}
