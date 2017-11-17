@@ -58,9 +58,10 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
 ## Commandes utiles
 
 *  ceph -s : Check l'état du cluster
-*  ceph osd pool create {pool-name} {pg-num} : Cree un pool
-*  ceph osd pool rm {poolname} : Delete une pool
-*  rados put {object-name} {file-path} --pool={poolname} : Ajoute un objet dans une pool<br/>
+*  ceph osd pool create {pool-name} {pg-num} : Crée une pool
+*  ceph osd pool rm {poolname} : Supprime une pool
+*  rados put {object-name} {file-path} --pool={poolname} : Ajoute un objet dans une certaine pool
+*  rados rm {object-name} --pool={pool-name} : Delete un objet dans une certaine pool 
 *  rados -p {poolname} ls : list des objets dans une pool
 
 
