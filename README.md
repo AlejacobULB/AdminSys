@@ -64,6 +64,11 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     ```
 
 ### Pool
+*  Lister les pools :
+    ```
+    rados lspools
+    ```
+
 *  Créer une pool :
     ```
     ceph osd pool create {pool-name} {pg-num} 
