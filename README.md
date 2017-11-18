@@ -78,8 +78,9 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     
 *  Supprimer une pool :
     ```
-    ceph osd pool rm {poolname} 
+    ceph osd pool rm {poolname} {poolname} --yes-i-really-really-mean-it  
     ```
+    **NOTE: à ne faire que si on veut vraiment certain d'en vouloir supprimer toutes les données du pool {poolname}**
 *  Lister les objets dans une pool :
     ```
     rados -p {poolname} ls 
