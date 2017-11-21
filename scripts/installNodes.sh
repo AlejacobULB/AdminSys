@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-CEPH_USERNAME=cephUser
-PASSWORD=ceph
-
 #! DO NOT RUN ON YOUR PC !
 #Run on node
-
 # Purpose: Add cephUser on a node
+
+CEPH_USERNAME=cephUser
+PASSWORD=ceph
 
 # Create user
 echo $'\n ===>Creating Ceph user<=== \n'

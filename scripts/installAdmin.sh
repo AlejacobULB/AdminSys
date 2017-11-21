@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-NUMBER_OF_OSD_NODES=3
-CEPH_USERNAME=cephUser
-
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
 
 # Purpose: setup the admin node. Installs ceph-deploy and sends ssh key to other nodes to
 # allow them to communicate easily
 
-# Import project-wide constants
+NUMBER_OF_OSD_NODES=3
+CEPH_USERNAME=cephUser
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
