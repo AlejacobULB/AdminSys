@@ -24,10 +24,10 @@ sudo apt install ceph-deploy -y
 # Create SSH keys and copy them to the nodes
 echo "Create SSH keys and copy them to the nodes"
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
-
-sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node1
-sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node2
-sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node3
+for ((i=0; i<NUMBER_OF_NODES; i++));
+do
+  sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node$i
+done
 
 # Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can
 # log in to Ceph nodes as the user you created without requiring you to specify --username {username} each
