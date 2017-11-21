@@ -3,7 +3,12 @@
 # Purpose: Run this script on the admin to add a new node to the cluster
 
 # Import project-wide constants
-source const.sh
+#!/usr/bin/env bash
+NUMBER_OF_NODES=4
+NUMBER_OF_OSD_NODES=3
+CEPH_USERNAME=cephUser
+PASSWORD=ceph
+ADMIN_PORT=3022
 
 # Script parameters
 nodeName=$1

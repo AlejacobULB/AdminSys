@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-source const.sh
+NUMBER_OF_NODES=4
+NUMBER_OF_OSD_NODES=3
+CEPH_USERNAME=cephUser
+PASSWORD=ceph
+ADMIN_PORT=3022
 
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
@@ -8,7 +12,6 @@ source const.sh
 # allow them to communicate easily
 
 # Import project-wide constants
-source const.sh
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
@@ -28,10 +31,13 @@ sudo apt install ceph-deploy -y
 
 # Create SSH keys and copy them to the nodes
 echo "Create SSH keys and copy them to the nodes"
-ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
-for ((i=0; i<NUMBER_OF_OSD_NODES; i++));
+yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+
+echo "fini yes"
+for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
 do
-  sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node$i
+  sshpass -p ceph ssh-copy-id "$CEPH_USERNAME@node$i"
+  #sleep 5 # Sleep is required otherwise it doesn't work
 done
 
 # Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can
@@ -40,7 +46,7 @@ done
 # This has the added benefit of streamlining ssh and scp usage
 echo "Modify the ~/.ssh/config file of your ceph-deploy admin node"
 
-for ((i=0; i<NUMBER_OF_NODES; i++));
+for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
 do
   cat >>~/.ssh/config <<EOL
   Host node$i
