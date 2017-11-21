@@ -1,5 +1,5 @@
-
-NUMBER_OF_NODES = 3
+#!/usr/bin/env bash
+source const.sh
 
 mkdir -p my-cluster
 cd my-cluster
