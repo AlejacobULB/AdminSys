@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 NUMBER_OF_NODES = 3
 
 mkdir -p my-cluster
@@ -11,6 +11,7 @@ echo "\nInstall Ceph packages on nodes\n"
 ceph-deploy install node1 node2 node3
 
 echo "\nDeploy the initial monitor(s) and gather the keys (pas trop compris ce que ca fait)\n"
+# Also creates a new configuration file and secret key
 ceph-deploy --overwrite-conf mon create-initial
 
 echo "\nCopy the configuration file and admin key to your admin node and your Ceph Nodes\n"
@@ -25,7 +26,7 @@ do
   ssh node$i sudo ceph -s
 done
 
-echo "\nGiving permissions to cephUser\n"
+echo "\nMake cephUser the new owner of the keyring file, so that it can execute rados commands\n"
 for ((i=0; i<NUMBER_OF_NODES; i++));
 do
   ssh node$i sudo chown cephUser:cephUser /etc/ceph/ceph.client.admin.keyring

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #! DO NOT RUN ON YOUR PC !
 #Run on node
 #Add ceph user on a node

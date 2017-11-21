@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
 # Install ceph-deploy and send ssh key to other nodes

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Run on host
 # Run installAdmin.sh on AdminNode
 

@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 #Run on host
 #Run installNodes on each node
 

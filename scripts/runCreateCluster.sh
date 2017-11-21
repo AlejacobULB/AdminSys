@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Run on host
 # Run createNodes.sh on AdminNode
 
