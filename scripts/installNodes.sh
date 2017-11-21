@@ -4,13 +4,10 @@ source const.sh
 #! DO NOT RUN ON YOUR PC !
 #Run on node
 
-<<<<<<< HEAD
 # Purpose: Add cephUser on a node
 
 # Import project-wide constants
 source const.sh
-=======
->>>>>>> 3090373a38c06edd8b0eefb289334669bda915d8
 
 # Create user
 echo $'\n ===>Creating Ceph user<=== \n'

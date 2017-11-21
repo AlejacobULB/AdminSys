@@ -4,14 +4,11 @@ source const.sh
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
 
-<<<<<<< HEAD
 # Purpose: setup the admin node. Installs ceph-deploy and sends ssh key to other nodes to
 # allow them to communicate easily
 
 # Import project-wide constants
 source const.sh
-=======
->>>>>>> 3090373a38c06edd8b0eefb289334669bda915d8
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https

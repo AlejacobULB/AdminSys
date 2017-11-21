@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
 
 # Purpose: Setup Ceph, create the OSDs and configure all the initial nodes of the cluster
 
 # Import project-wide constants
-=======
->>>>>>> 3090373a38c06edd8b0eefb289334669bda915d8
 source const.sh
 
 mkdir -p my-cluster
