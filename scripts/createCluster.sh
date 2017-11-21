@@ -5,7 +5,7 @@ mkdir -p my-cluster
 cd my-cluster
 
 echo "\nAdd monitor on nodes\n"
-ceph-deploy new node1 node2 node3
+ceph-deploy new node{1..$NUMBER_of_NODES}
 
 echo "\nInstall Ceph packages on nodes\n"
 ceph-deploy install node1 node2 node3
