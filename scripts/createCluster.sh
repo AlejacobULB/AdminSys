@@ -1,4 +1,5 @@
 
+NUMBER_OF_NODES = 3
 
 mkdir -p my-cluster
 cd my-cluster
@@ -19,6 +20,13 @@ echo "\nAdd OSD's on nodes\n"
 ceph-deploy osd create node1:sdb node2:sdb node3:sdb
 
 echo "\nCheck the node's health\n"
-ssh node1 sudo ceph -s
-ssh node2 sudo ceph -s
-ssh node3 sudo ceph -s
+for ((i=0; i<NUMBER_OF_NODES; i++));
+do
+  ssh node$i sudo ceph -s
+done
+
+echo "\nGiving permissions to cephUser\n"
+for ((i=0; i<NUMBER_OF_NODES; i++));
+do
+  ssh node$i sudo chown cephUser:cephUser /etc/ceph/ceph.client.admin.keyring
+done

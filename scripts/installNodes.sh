@@ -14,4 +14,3 @@ echo $'\n ==>Adding sudo privileges to newly created user<=== \n'
 # Add sudo privileges to newly created user
 echo "$CEPH_USERNAME ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$CEPH_USERNAME
 sudo chmod 0440 /etc/sudoers.d/$CEPH_USERNAME
-
