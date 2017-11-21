@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #! DO NOT RUN ON YOUR PC !
 #Run on node
-#Add ceph user on a node
 
-CEPH_USERNAME=cephUser
-PASSWORD=ceph
+# Purpose: Add cephUser on a node
+
+# Import project-wide constants
+source const.sh
 
 # Create user
 echo $'\n ===>Creating Ceph user<=== \n'

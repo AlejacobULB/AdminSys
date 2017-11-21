@@ -2,7 +2,8 @@
 #Run on host
 #Run installNodes on each node
 
-NUMBER_OF_NODES=4
+# Import project-wide constants
+source const.sh
 
 port=3022
 for ((i=0; i<NUMBER_OF_NODES; i++));

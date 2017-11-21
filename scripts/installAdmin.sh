@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
-# Install ceph-deploy and send ssh key to other nodes
 
-NUMBER_OF_NODES=3
-CEPH_USERNAME=cephUser
+# Purpose: setup the admin node. Installs ceph-deploy and sends ssh key to other nodes to
+# allow them to communicate easily
+
+# Import project-wide constants
+source const.sh
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
@@ -25,7 +27,7 @@ sudo apt install ceph-deploy -y
 # Create SSH keys and copy them to the nodes
 echo "Create SSH keys and copy them to the nodes"
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
-for ((i=0; i<NUMBER_OF_NODES; i++));
+for ((i=0; i<NUMBER_OF_OSD_NODES; i++));
 do
   sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node$i
 done

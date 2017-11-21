@@ -2,7 +2,7 @@
 # Run on host
 # Run createNodes.sh on AdminNode
 
-CEPH_USERNAME=cephUser
-ADMIN_PORT=3022
+# Import project-wide constants
+source const.sh
 
 cat createCluster.sh | ssh -p $ADMIN_PORT $CEPH_USERNAME@localhost
