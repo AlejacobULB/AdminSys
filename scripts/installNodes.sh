@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-source const.sh
 
 #! DO NOT RUN ON YOUR PC !
 #Run on node
@@ -7,7 +6,7 @@ source const.sh
 # Purpose: Add cephUser on a node
 
 # Import project-wide constants
-source const.sh
+source ~/const.sh
 
 # Create user
 echo $'\n ===>Creating Ceph user<=== \n'
