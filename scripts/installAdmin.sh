@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
+source const.sh
+
 #! DO NOT RUN ON YOUR PC!
 # Run on AdminNode
 
+<<<<<<< HEAD
 # Purpose: setup the admin node. Installs ceph-deploy and sends ssh key to other nodes to
 # allow them to communicate easily
 
 # Import project-wide constants
 source const.sh
+=======
+>>>>>>> 3090373a38c06edd8b0eefb289334669bda915d8
 
 echo $'\n ===>Setting up APT<=== \n'
 sudo apt install apt-transport-https
@@ -37,14 +42,12 @@ done
 # time you execute ceph-deploy.
 # This has the added benefit of streamlining ssh and scp usage
 echo "Modify the ~/.ssh/config file of your ceph-deploy admin node"
-cat >>~/.ssh/config <<EOL
-Host node1
-   Hostname node1
-   User $CEPH_USERNAME
-Host node2
-   Hostname node2
-   User $CEPH_USERNAME
-Host node3
-   Hostname node3
-   User $CEPH_USERNAME
+
+for ((i=0; i<NUMBER_OF_NODES; i++));
+do
+  cat >>~/.ssh/config <<EOL
+  Host node$i
+     Hostname node$i
+     User $CEPH_USERNAME
 EOL
+done

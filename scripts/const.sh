@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 NUMBER_OF_NODES=4
 NUMBER_OF_OSD_NODES=3
 CEPH_USERNAME=cephUser
