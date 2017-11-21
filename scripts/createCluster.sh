@@ -24,7 +24,7 @@ ceph-deploy admin node{1..$NUMBER_OF_OSD_NODES}
 
 echo "\nAdd OSD's on nodes\n"
 #ceph-deploy osd create node1:sdb node2:sdb node3:sdb
-ceph-deploy osd create node{1..$NUMBER_OF_OSD_NODES}:sdb
+ceph-deploy osd create node{1..$NUMBER_OF_OSD_NODES:sdb}
 
 echo "\nCheck the node's health\n"
 for ((i=0; i<NUMBER_OF_OSD_NODES; i++));
