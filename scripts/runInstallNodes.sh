@@ -13,6 +13,7 @@ do
 	# For this to run correctly, we needed to change sudoers beforehand so
 	# that sudo'ing as admin doesn't require a password
 	# TODO: find a better solution
-	ssh -p $port admin@localhost 'bash -s' < installNodes.sh 
+	scp -P $port const.sh admin@localhost:/tmp
+	cat installNodes.sh | ssh -p $port admin@localhost
 	((port++))
 done

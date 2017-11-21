@@ -6,7 +6,7 @@
 # Purpose: Add cephUser on a node
 
 # Import project-wide constants
-source ~/const.sh
+source /tmp/const.sh
 
 # Create user
 echo $'\n ===>Creating Ceph user<=== \n'
