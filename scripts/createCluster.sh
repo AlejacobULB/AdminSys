@@ -5,7 +5,8 @@ mkdir -p my-cluster
 cd my-cluster
 
 echo "\nAdd monitor on nodes\n"
-ceph-deploy new node{1..$NUMBER_of_NODES}
+#ceph-deploy new node1 node2 node3
+ceph-deploy new node{1..$NUMBER_OF_NODES}
 
 echo "\nInstall Ceph packages on nodes\n"
 ceph-deploy install node1 node2 node3
@@ -17,7 +18,8 @@ echo "\nCopy the configuration file and admin key to your admin node and your Ce
 ceph-deploy admin node1 node2 node3
 
 echo "\nAdd OSD's on nodes\n"
-ceph-deploy osd create node1:sdb node2:sdb node3:sdb
+#ceph-deploy osd create node1:sdb node2:sdb node3:sdb
+ceph-deploy osd create node{1..$NUMBER_OF_NODES}:sdb
 
 echo "\nCheck the node's health\n"
 for ((i=0; i<NUMBER_OF_NODES; i++));
