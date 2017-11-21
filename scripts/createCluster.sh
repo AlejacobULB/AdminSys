@@ -2,12 +2,7 @@
 
 # Purpose: Setup Ceph, create the OSDs and configure all the initial nodes of the cluster
 
-# Import project-wide constants
-NUMBER_OF_NODES=4
 NUMBER_OF_OSD_NODES=3
-CEPH_USERNAME=cephUser
-PASSWORD=ceph
-ADMIN_PORT=3022
 
 mkdir -p my-cluster
 cd my-cluster
