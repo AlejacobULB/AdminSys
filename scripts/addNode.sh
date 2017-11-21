@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-# Run this script on the admin to add a new node to the cluster
+# Purpose: Run this script on the admin to add a new node to the cluster
+
+# Import project-wide constants
+source const.sh
+
+# Script parameters
 nodeName=$1
 diskDevice=${2:-sdb} # The default name of the disk device is sdb
 
@@ -11,7 +16,7 @@ diskDevice=${2:-sdb} # The default name of the disk device is sdb
 ##########################
 
 echo "Copy the SSH key to the new node to enable password-less SSH"
-sshpass -p ceph ssh-copy-id $CEPH_USERNAME@node3
+sshpass -p ceph ssh-copy-id $CEPH_USERNAME@$nodeName
 
 echo "Add the new node information to the ~/.ssh/config for easy SSH'ing"
 cat >>~/.ssh/config <<EOL
@@ -27,7 +32,6 @@ EOL
 ##################################
 
 # Go to the my-cluster directory (which contains all the configuration files)
-mkdir -p my-cluster
 cd my-cluster
 
 echo "\nInstall Ceph packages on the new node\n"

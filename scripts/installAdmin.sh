@@ -35,14 +35,12 @@ done
 # time you execute ceph-deploy.
 # This has the added benefit of streamlining ssh and scp usage
 echo "Modify the ~/.ssh/config file of your ceph-deploy admin node"
-cat >>~/.ssh/config <<EOL
-Host node1
-   Hostname node1
-   User $CEPH_USERNAME
-Host node2
-   Hostname node2
-   User $CEPH_USERNAME
-Host node3
-   Hostname node3
-   User $CEPH_USERNAME
+
+for ((i=0; i<NUMBER_OF_NODES; i++));
+do
+  cat >>~/.ssh/config <<EOL
+  Host node$i
+     Hostname node$i
+     User $CEPH_USERNAME
 EOL
+done
