@@ -30,11 +30,9 @@ sudo apt install ceph-deploy -y
 echo "Create SSH keys and copy them to the nodes"
 yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
-echo "fini yes"
 for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
 do
   sshpass -p ceph ssh-copy-id "$CEPH_USERNAME@node$i"
-  #sleep 5 # Sleep is required otherwise it doesn't work
 done
 
 # Modify the ~/.ssh/config file of your ceph-deploy admin node so that ceph-deploy can
