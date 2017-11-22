@@ -39,6 +39,7 @@ done
 # This has the added benefit of streamlining ssh and scp usage
 echo "Modify the ~/.ssh/config file of your ceph-deploy admin node"
 
+> ~/.ssh/config #Make it empty
 for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
 do
   cat >>~/.ssh/config <<EOL
