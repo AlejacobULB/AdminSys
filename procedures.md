@@ -1,22 +1,24 @@
 **How to configure a new node for the cluster**
 
-1. Add a network interface :
+1. Add a network interface (/etc/networkk/interfaces):
 
-  auto enp0s8
+    ```
+    auto enp0s8
   
-  iface enp0s8 inet static
+    iface enp0s8 inet static
   
-  adress 10.0.0.X
+    adress 10.0.0.X
   
-  netmask 255.255.255.0
+    netmask 255.255.255.0
+    ```
 
-2. Add this line to the hosts file on the admin nodes :
+2. Add this line to the hosts file on the admin nodes (/etc/hosts):
 
-  nodeX 10.0.0.X
+    `nodeX 10.0.0.X`
 
-3. Modify the hostname file with :
+3. Modify the hostname file with (/etc/hostname):
 
-  nodeX
+    `nodeX`
 
 
 **How to add a new node to the cluster**
