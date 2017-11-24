@@ -17,4 +17,4 @@ echo "$CEPH_USERNAME ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$CEPH_
 sudo chmod 0440 /etc/sudoers.d/$CEPH_USERNAME
 
 echo "\nInstall NTP Server\n"
-sudo apt -y install ntp
+sudo apt -y install ntp ntpdate
