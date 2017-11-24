@@ -25,7 +25,7 @@ echo $'\n ===>Installing ceph-deploy<=== \n'
 sudo apt install ceph-deploy -y
 
 # Create SSH keys and copy them to the nodes
-echo "Create SSH keys and copy them to the nodes"
+echo "\nCreate SSH keys and copy them to the nodes\n"
 yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run on host
-# Run installAdmin.sh on AdminNode
+# Purpose: executes the installAdmin.sh script on the admin node
 
 CEPH_USERNAME=cephUser
 ADMIN_PORT=3022

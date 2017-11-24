@@ -4,9 +4,11 @@
 
 NUMBER_OF_OSD_NODES=3
 
+# Create the folder with all the ceph-deploy configuration files
 mkdir -p my-cluster
 cd my-cluster
 
+# Creates 2 strings: one with all the nodes, and one with all the nodes with their disk devices
 nodes=""
 nodesSDB=""
 for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
@@ -15,7 +17,7 @@ do
   nodesSDB="$nodesSDB node$i:sdb"
 done
 
-echo $nodes
+echo "\nWe will setup the cluster on the following OSD nodes: $nodes\n"
 
 echo "\nAdd monitor on nodes\n"
 #ceph-deploy new node1 node2 node3

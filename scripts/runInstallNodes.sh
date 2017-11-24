@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Run on host
-#Run installNodes on each node
+# Purpose: executes the installNodes.sh script on each node
 
 NUMBER_OF_NODES=4
 

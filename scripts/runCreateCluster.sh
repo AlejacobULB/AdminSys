@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run on host
-# Run createNodes.sh on AdminNode
+# Purpose: executes the createCluster.sh script on the admin node
 
 CEPH_USERNAME=cephUser
 ADMIN_PORT=3022
