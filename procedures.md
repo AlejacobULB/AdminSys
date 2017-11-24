@@ -1,15 +1,21 @@
 **How to configure a new node for the cluster**
 
 1. Add a network interface :
+
   auto enp0s8
+  
   iface enp0s8 inet static
+  
   adress 10.0.0.X
+  
   netmask 255.255.255.0
 
 2. Add this line to the hosts file on the admin nodes :
+
   nodeX 10.0.0.X
 
 3. Modify the hostname file with :
+
   nodeX
 
 
