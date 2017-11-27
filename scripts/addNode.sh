@@ -48,9 +48,6 @@ echo "\nCopy the configuration file and admin key to the new node\n"
 # which enables it to execute ceph commands with administrator privileges
 ceph-deploy admin $nodeName
 
-echo "\nAdd OSD's on nodes\n"
-ceph-deploy osd create $nodeName:$diskDevice
-
 echo "\nCheck the new node's health\n"
 ssh $nodeName sudo ceph -s
 
