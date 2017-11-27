@@ -34,8 +34,14 @@ echo "\nCopy the configuration file and admin key to your admin node and your Ce
 ceph-deploy admin $nodes
 
 echo "\nAdd OSD's on nodes\n"
-#ceph-deploy osd create node1:sdb node2:sdb node3:sdb
+
+# We have 6 OSD on each node on disks SDB -> SDG
 ceph-deploy osd create $nodesSDB
+ceph-deploy osd create $nodesSDC
+ceph-deploy osd create $nodesSDD
+ceph-deploy osd create $nodesSDE
+ceph-deploy osd create $nodesSDF
+ceph-deploy osd create $nodesSDG
 
 echo "\nCheck the node's health\n"
 for ((i=1; i<=NUMBER_OF_OSD_NODES; i++));
