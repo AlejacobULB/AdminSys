@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Purpose: Setup Ceph, create the OSDs and configure all the initial nodes of the cluster
 
