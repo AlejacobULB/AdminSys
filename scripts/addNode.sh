@@ -5,15 +5,13 @@
 CEPH_USERNAME=cephUser
 
 if [[ $# -eq 0 ]] ; then
-    echo 'Too few parameters. You must pass the node name, and optionally the disk device name'
+    echo 'Too few parameters. You must pass the node name'
     echo 'Example: ./addNode.sh node8'
-    echo 'Example: ./addNode.sh node8 sdb'
     exit 0
 fi
 
 # Script parameters
 nodeName=$1
-diskDevice=${2:-sdb} # The default name of the disk device is sdb
 
 
 
