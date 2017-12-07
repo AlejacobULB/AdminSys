@@ -9,7 +9,7 @@ Projet INFO-F309: Administration de systèmes
 
 [Enonce](http://www.ulb.ac.be/di/algo/secollet/adminsys/projet.pdf)
 
-[Slide Présentation](https://docs.google.com/presentation/d/1RbIpsnIwDu9Z2vNWYgzqFSBCIeuSuX8-DNU6i8RPp4s/edit?usp=sharing)
+[Slide Présentation](https://docs.google.com/presentation/d/1hBoaNyIpS513fzMzaDj7uqLFPIrzzR2-uRhgsXz_zAg/edit?usp=sharing)
 
 
 
