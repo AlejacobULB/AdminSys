@@ -1,13 +1,15 @@
 # AdminSys
 Projet INFO-F309: Administration de systèmes
 
-[Latex: Rapport d'analyse](https://www.overleaf.com/11636920fhhzbnhqydjz) 
+[Latex: Rapport d'analyse](https://www.overleaf.com/11636920fhhzbnhqydjz)
 
-[Latex: Rapport d'implémentation](https://www.overleaf.com/12281257jnvzbnntpnjr) 
+[Latex: Rapport d'implémentation](https://www.overleaf.com/12281257jnvzbnntpnjr)
 
 [Tableau de comparaison](https://docs.google.com/document/d/168RMYuq4Ep0hAeY92o6pK7WYBCf9zQ5wtZTn307ikt0/edit?usp=sharing)
 
 [Enonce](http://www.ulb.ac.be/di/algo/secollet/adminsys/projet.pdf)
+
+[Slide Présentation](https://docs.google.com/presentation/d/1RbIpsnIwDu9Z2vNWYgzqFSBCIeuSuX8-DNU6i8RPp4s/edit?usp=sharing)
 
 
 
@@ -36,7 +38,7 @@ Projet INFO-F309: Administration de systèmes
 
 [PG calculator](http://ceph.com/pgcalc/)
 
-# Machines Virtuelles 
+# Machines Virtuelles
 
 4 Machines :<br />
 1: admin-node <br />
@@ -48,7 +50,7 @@ Username/password sur toutes les machines : admin/admin
 
 [Lien vers les fichiers .ova](https://drive.google.com/open?id=1d3xU7Si4vHFo3O0_gkWn83QQp0W8w9pT)
 
-# Scripts 
+# Scripts
 installNodes.sh : Crée un user nommé "cephUser" avec comme password "ceph" sur tous les noeuds<br />
 runInstallNodes.sh : Se connecte en SSH à tous les noeuds pour executer installNodes.sh<br />
 <br />
@@ -62,7 +64,7 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
 # Commandes utiles
 
 ## Générales
-*  Check l'état du cluster : 
+*  Check l'état du cluster :
     ```
     ceph -s
     ```
@@ -75,9 +77,9 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
 
 *  Créer une pool :
     ```
-    ceph osd pool create {pool-name} {pg-num} 
+    ceph osd pool create {pool-name} {pg-num}
     ```
-    
+
 *  Supprimer une pool :
     ```
     ceph osd pool rm {poolname} {poolname} --yes-i-really-really-mean-it  
@@ -85,11 +87,11 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     **NOTE: à ne faire que si on veut vraiment certain d'en vouloir supprimer toutes les données du pool {poolname}**
 *  Lister les objets dans une pool :
     ```
-    rados -p {poolname} ls 
+    rados -p {poolname} ls
     ```
-   
+
 ## Objets
-*  Ajouter un objet dans une certaine pool : 
+*  Ajouter un objet dans une certaine pool :
     ```
     rados put {object-name} {file-path} --pool={poolname}
     ```
@@ -97,6 +99,3 @@ From RedHat: [Hardware Recommendations](https://access.redhat.com/node/1499443/p
     ```
     rados rm {object-name} --pool={pool-name}
     ```
-
-
-
